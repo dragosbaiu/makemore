@@ -15,6 +15,14 @@ A character-level language model built from scratch following Andrej Karpathy's 
 - Dataset split — 80% training, 10% dev, 10% testing
 - Trained over 50k iterations with batch size 32, reaching ~2.18 train loss and ~2.22 dev loss
 
+### Part 3
+- Forward pass activations and backward pass gradients — deep dive into MLP internals across multiple layers, inspecting statistics and identifying pitfalls from improper scaling
+- Diagnostic tools — visualizations for activation distributions, gradient distributions, weight gradient histograms, and update-to-data ratio plots to assess the health of a deep network
+- Kaiming initialization — proper weight scaling to avoid vanishing/exploding activations at init ([paper](https://arxiv.org/abs/1502.01852))
+- Batch Normalization — first modern technique that made training deep nets much easier; implemented from scratch and as a reusable `BatchNorm1d` class with running statistics for inference ([paper](https://arxiv.org/abs/1502.03167))
+- Module system — reusable `Linear`, `BatchNorm1d`, and `Tanh` classes enabling clean composition of deep architectures
+- Notable todos for later: residual connections and the Adam optimizer
+
 ## Usage
 Open the desired notebook in Jupyter and run the cells in order.
 

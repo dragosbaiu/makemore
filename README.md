@@ -23,6 +23,13 @@ A character-level language model built from scratch following Andrej Karpathy's 
 - Module system — reusable `Linear`, `BatchNorm1d`, and `Tanh` classes enabling clean composition of deep architectures
 - Notable todos for later: residual connections and the Adam optimizer
 
+### Part 4
+- Manual backpropagation — 4 exercises implementing the backward pass by hand:
+  1. Backprop through every intermediate variable of the forward pass one by one (cross-entropy, softmax, batch norm, tanh, linear layers)
+  2. Fused backward pass through the full cross-entropy loss in a single closed-form expression
+  3. Fused backward pass through batch normalization in a single closed-form expression
+  4. Full training loop using only the manual backward pass (no `loss.backward()`)
+
 ## Usage
 Open the desired notebook in Jupyter and run the cells in order.
 
